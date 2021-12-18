@@ -3,24 +3,32 @@
 <html>
 <head>
     <script>
-        function hitung() {
-            const dollar = 14650; //konstanta
-            let rupiah = document.getElementById("rupiah").value;
-            console.log("Rupiah : Rp." + rupiah);
-            let hasil_dollar = rupiah / dollar
-            console.log("Dollar : $ zazaa" + hasil_dollar);
-            let area_hasil = document.getElementById("hasil");
-            area_hasil.innerHTML = "  $" + hasil_dollar;
-        }
+       function input() {
+         const USD = 14650;
+         let inputan = Number(document.getElementById("input").value);
+         let hasil = inputan * USD;
+        document.getElementById("result").value = hasil;
+    }
     </script>
     <title>Tugas 2 RianRomansyah</title>
 </head>
 <body>
-    <h3>Rupiah Ke Dolar</h3>
-   <h4> Masukan jumlah rupiah :  </h4>
-    <input type="number" value="" size="10" id="rupiah">
-    <br/>
-<h3><button onclick="hitung()">Hitung</button> </h3>
-    <br />Dalam Dollar : <span id="hasil"></span>
+    <h1>Menghitung Kurs Rupiah</h1>
+
+    <table border="1">
+        <tr>
+            <th>Input Your Dollar</th>
+            <th>Nominal Tetap</th>
+            <th>Hasil Convert</th>
+        </tr>
+        <td>
+            <input type="number" id="input" onchange="input()">
+        </td>
+        <td id="tetap" onchange="input()">1$ Dollor US = Rp. 14.650</td>
+        <td>
+            <input type="number" readonly id="result">
+        </td>
+    </table>
+
 </body>
 </html>
