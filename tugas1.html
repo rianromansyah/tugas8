@@ -5,30 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        function hitung(){
-            const phi = 3.14;
-            let jari = document.getElementById("bil1").value;
-            console.log("jari-jari: " + jari);
-            let luas = phi * jari * jari           
-            let kll = 2.0 * phi * jari
-            console.log("luas: " + luas);
-            console.log("kll: " + kll);
-            let area_hasil = document.getElementById("hasil");
-            area_hasil.innerHTML = "Luas : " + luas + "cm" + "\nKeliling : " + kll; 
-                                    
-        }
+       function hitung() {
+        const PHI = 3.14;
+        let jari = document.getElementById("bil1").value;
+         console.log("jari-jari : " + jari);
+        let luas = PHI * jari * jari;
+        let keliling = 2.0 * PHI * jari;
+        console.log("Luas : " + luas);
+        console.log("Keliling : " + keliling);
+         let area_hasil = document.getElementById("hasil");
+         area_hasil.innerHTML = "Luas : " + luas + "</br>" + "Keliling : " + keliling;
+}
+
     </script>
     <title>SOAL 1 RianRomansyah</title>
 </head>
 <body>
-    <h3>Keliling Lingkaran</h3>
-   <h4>Masukkan jari-jari lingkaran: </h4>  
-    <input type="number" value="" size="10" id="bil1">
-    
-    <br><br/>
-    <button onclick="hitung()">hitung</button>
-    <br> <br>
-    Hasil: <span id="hasil"></span>
-
+    <h3>Menghitung Luas & Keliling Lingkaran</h3>
+    Masukan Jari-Jari Lingkaran :
+    <input type="number" value="" size="12" id="bil1">
+    <br>
+    <button onclick="hitung()">Hitung</button>
+    <br>
+    Hasil :
+    <br>
+    <span id="hasil"></span>
 </body>
 </html>
